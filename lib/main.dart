@@ -74,7 +74,7 @@ class _AppStateWidgetState extends State<AppStateWidget> {
   void setProductList(List<String> newList) {
     if (newList != _data.productList) {
       setState(() {
-        _data.copyWith(
+        _data = _data.copyWith(
           productList: newList,
         );
       });
@@ -86,7 +86,7 @@ class _AppStateWidgetState extends State<AppStateWidget> {
       final Set<String> newList = Set<String>.from(_data.itemsInCart);
       newList.add(id);
       setState(() {
-        _data.copyWith(
+        _data = _data.copyWith(
           itemsInCart: newList,
         );
       });
@@ -98,7 +98,7 @@ class _AppStateWidgetState extends State<AppStateWidget> {
       final Set<String> newList = Set<String>.from(_data.itemsInCart);
       newList.remove(id);
       setState(() {
-        _data.copyWith(
+        _data = _data.copyWith(
           itemsInCart: newList,
         );
       });
